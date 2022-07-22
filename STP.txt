@@ -1,0 +1,29 @@
+問1
+・Switch3
+
+問2
+ルートポート
+・switch1-switch3:100
+  switch1-switch2-switch4-switch3:19+100+100=219
+  よってswitch1-switch3がルートポート
+
+・switch2-switch1-switch3:19+100=119
+  switch2-switch4-switch3:100+100=200
+  よってswitch2-switch1がルートポート
+
+・switch4-switch3:100
+  switch4-switch2-switch1:100+19+100=219
+  よってswitch4-switch3がルートポート
+
+
+指定ポート
+・ルートブリッジのすべてのルートは指定ポートになるので
+　switch3-switch1、switch3-switch4は指定ポート。
+
+・ルートポートの対向ポートは必ず指定ポートになるので
+　switch1-switch2、switch4-switch2は指定ポート。
+
+
+ブロッキングポート
+・何の役割も与えられていないポートがブロッキングポートとなるので
+　switch2-switch4がブロッキングポートとなる。
